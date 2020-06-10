@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aws-queue-reponook-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aws-queue-reponook
+  template:
+    metadata:
+      labels:
+        app: aws-queue-reponook
+    spec:
+      containers:
+      - name: aws-queue-reponook-pod
+        image: docker.io/mtmazurik/aws_queue_reponook:latest
+        imagePullPolicy: Always
+        ports:
+        - name: aws_queue_reponook-port
+          containerPort: 80
+        env:
+        - name: AtlasMongoConnection
+          valueFrom:
+            secretKeyRef:
+              name: db-connection-string1
+              key: atlas-mongo-connection-string
+        livenessProbe:
+          httpGet:
+            path: /admin/ping
+            port: 80
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /admin/ping
+            port: 80
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
+
+

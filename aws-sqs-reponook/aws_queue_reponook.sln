@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7631C5BC-B886-4703-82EF-85269AB4C4AA}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		_Jenkinsfile = _Jenkinsfile
+		_k8s-secrets-aws-queue-reponook.yml = _k8s-secrets-aws-queue-reponook.yml
+		appsettings.json = appsettings.json
+		aws_queue_reponook-svc.yml = aws_queue_reponook-svc.yml
+		aws_queue_reponook.yml = aws_queue_reponook.yml
+		Dockerfile = Dockerfile
+		Properties\launchSettings.json = Properties\launchSettings.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aws_queue_reponook", "aws_queue_reponook.csproj", "{FEA55E6F-7CCC-497D-9116-5A842A37731B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEA55E6F-7CCC-497D-9116-5A842A37731B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA55E6F-7CCC-497D-9116-5A842A37731B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA55E6F-7CCC-497D-9116-5A842A37731B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA55E6F-7CCC-497D-9116-5A842A37731B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D53D694-24EE-433B-897E-C6FE3F8F8FEC}
+	EndGlobalSection
+EndGlobal
